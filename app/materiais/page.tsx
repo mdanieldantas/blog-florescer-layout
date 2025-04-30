@@ -1,3 +1,4 @@
+import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Search, Filter } from "lucide-react"
@@ -160,9 +161,25 @@ export default function Materiais() {
             </div>
             
             <div className="flex flex-wrap gap-2">
-              <button className="px-
-### Projeto Blog Florescer Humano
-
-Vou criar o projeto do blog "Florescer Humano\" seguindo as especificações fornecidas. Baseando-me nas imagens de referência e na documentação detalhada, desenvolverei um site moderno e responsivo que transmita a essência do humanismo e do desenvolvimento pessoal.
-
-Primeiro, vamos criar os estilos globais e a configuração do Tailwind:
+              <button className="px-4 py-2 rounded-full border border-marrom/20 hover:border-verde-terra transition-colors">
+                Todos
+              </button>
+              <button className="px-4 py-2 rounded-full border border-marrom/20 hover:border-verde-terra transition-colors">
+                E-books
+              </button>
+              <button className="px-4 py-2 rounded-full border border-marrom/20 hover:border-verde-terra transition-colors">
+                Kits Digitais
+              </button>
+              <button className="px-4 py-2 rounded-full border border-marrom/20 hover:border-verde-terra transition-colors">
+                Áudios
+              </button>
+              <button className="px-4 py-2 rounded-full border border-marrom/20 hover:border-verde-terra transition-colors">
+                Vídeos
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

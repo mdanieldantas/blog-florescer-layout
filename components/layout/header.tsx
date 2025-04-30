@@ -39,20 +39,23 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="text-marrom hover:text-verde-terra transition-colors">
-              Início
+            <Link href="/categorias" className="text-marrom hover:text-verde-terra transition-colors">
+              Categorias
             </Link>
-            <Link href="/blog" className="text-marrom hover:text-verde-terra transition-colors">
-              Blog
+            <Link href="/artigos" className="text-marrom hover:text-verde-terra transition-colors">
+              Artigos
             </Link>
             <Link href="/sobre" className="text-marrom hover:text-verde-terra transition-colors">
               Sobre
             </Link>
+            <Link href="/contato" className="text-marrom hover:text-verde-terra transition-colors">
+              Contato
+            </Link>
             <Link href="/materiais" className="text-marrom hover:text-verde-terra transition-colors">
               Materiais
             </Link>
-            <Link href="/contato" className="text-marrom hover:text-verde-terra transition-colors">
-              Contato
+            <Link href="/midias" className="text-marrom hover:text-verde-terra transition-colors">
+              Mídias
             </Link>
           </nav>
 
@@ -80,18 +83,18 @@ export default function Header() {
         <div className="md:hidden bg-white border-t border-marrom/10">
           <nav className="container-custom py-4 flex flex-col space-y-4">
             <Link
-              href="/"
+              href="/categorias"
               className="text-marrom hover:text-verde-terra transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Início
+              Categorias
             </Link>
             <Link
-              href="/blog"
+              href="/artigos"
               className="text-marrom hover:text-verde-terra transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Blog
+              Artigos
             </Link>
             <Link
               href="/sobre"
@@ -101,6 +104,13 @@ export default function Header() {
               Sobre
             </Link>
             <Link
+              href="/contato"
+              className="text-marrom hover:text-verde-terra transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contato
+            </Link>
+            <Link
               href="/materiais"
               className="text-marrom hover:text-verde-terra transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
@@ -108,11 +118,11 @@ export default function Header() {
               Materiais
             </Link>
             <Link
-              href="/contato"
+              href="/midias"
               className="text-marrom hover:text-verde-terra transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contato
+              Mídias
             </Link>
             <Link
               href="/materiais/gratuitos"
