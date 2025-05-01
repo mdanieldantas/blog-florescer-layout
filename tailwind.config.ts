@@ -37,8 +37,7 @@ const config: Config = {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
+        },        popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
@@ -52,7 +51,7 @@ const config: Config = {
         terracota: "#B67A63",
         "coral-claro": "#FFB299",
         areia: "#F4EED9",
-        bege: "#EAE6E1",
+        bege: "#F3F1F5",
         marrom: "#583B1F",
       },
       borderRadius: {
