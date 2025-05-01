@@ -2,28 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 36 33% 97%;
-    --foreground: 30 45% 23%;
+@layer base {  :root {
+    --background: 48 45% 97%;  /* tom areia-clara aprimorado - mais quente */
+    --foreground: 30 45% 23%;  /* marrom escuro para melhor legibilidade */
     
-    /* Mantendo o verde-terra como cor primária */
-    --primary: 120 21% 45%;  /* equivalente a #5B8C5A */
-    --primary-foreground: 36 33% 97%;
+    /* Verde-terra como cor primária - ajustado para mais vitalidade */
+    --primary: 120 23% 45%;  /* verde-terra com saturação levemente aumentada */
+    --primary-foreground: 0 0% 100%;  /* branco para melhor contraste */
     
-    --secondary: 36 33% 97%;
-    --secondary-foreground: 30 45% 23%;
+    /* Areia como cor secundária - refinada para tons mais quentes */
+    --secondary: 42 55% 92%;  /* tom areia mais dourado e acolhedor */
+    --secondary-foreground: 30 45% 23%;  /* marrom */
     
-    --muted: 36 33% 97%;
-    --muted-foreground: 30 30% 36%;
+    /* Bege mais natural para áreas muted/discretas */
+    --muted: 28 45% 96%;  /* bege natural mais caloroso - base de jardim */
+    --muted-foreground: 30 30% 36%;  /* marrom médio */
     
-    /* Usando terracota como accent */
-    --accent: 17 36% 55%;  /* equivalente a #B67A63 */
-    --accent-foreground: 0 0% 100%;
+    /* Terracota como accent - intensificada levemente */
+    --accent: 17 43% 55%;  /* terracota mais vibrante para melhor expressão */
+    --accent-foreground: 0 0% 100%;  /* branco para melhor contraste */
     
-    --border: 30 30% 76%;
-    --input: 30 30% 76%;
-    --ring: 120 21% 45%;  /* verde-terra para o ring focus */
+    /* Bordas e elementos de interface refinados */
+    --border: 30 32% 86%;  /* borda mais harmônica com a paleta */
+    --input: 30 32% 96%;  /* input com fundo mais integrado à paleta */
+    --ring: 120 30% 45%;  /* verde-terra para o ring focus */
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -40,35 +42,50 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
   }
-
   h1,
   h2,
   h3 {
-    /* Mantendo a mesma cor verde para os títulos */
-    color: #5b8c5a;
+    /* Mantendo a cor verde para os títulos, mas com tom aprimorado */
+    color: #4E7D4C; /* Verde mais profundo para melhor leitura */
     font-family: var(--font-playfair);
+    font-weight: 500; /* Peso médio para melhor hierarquia */
+    line-height: 1.3; /* Linha mais espaçada para melhor leitura */
   }
+  
   h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em; /* Pequeno ajuste para tipografia mais moderna */
   }
 
   h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Adicionando h4 para mais níveis de hierarquia */
+  h4 {
+    font-size: 1.15rem;
     margin-bottom: 0.5rem;
+    color: #583B1F; /* Marrom para variação */
+    font-family: var(--font-playfair);
+    font-weight: 500;
   }
 
   a {
     color: hsl(var(--accent)); /* Usando variável CSS para links */
+    transition: color 0.2s ease, text-decoration 0.2s ease;
   }
 
   a:hover {
     text-decoration: underline;
+    color: hsl(var(--accent)/0.85); /* Leve escurecimento no hover */
   }
 }
 
@@ -78,37 +95,89 @@
     color: hsl(var(--primary-foreground));
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(91, 140, 90, 0.15);
   }
 
   .btn-primary:hover {
-    background-color: #3a5a38;
+    background-color: #3d603b; /* Verde-terra um pouco mais escuro e rico */
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(91, 140, 90, 0.25);
   }
 
   .btn-secondary {
-    border: 1px solid #b67a63;
-    color: #b67a63;
+    border: 1px solid hsl(var(--accent));
+    color: hsl(var(--accent));
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     transition: all 0.3s;
   }
-
   .btn-secondary:hover {
-    background-color: #b67a63;
+    background-color: hsl(var(--accent));
     color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(182, 122, 99, 0.25);
   }
-
+    /* Classes de utilidade para os fundos refinados */
+  .bg-areia-clara {
+    background-color: #FAF8EA; /* Tom areia mais quente e acolhedor */
+  }
+  
+  .bg-bege-claro {
+    background-color: #FEF7F2; /* Bege natural mais caloroso */
+  }
+  
+  .bg-gradient-nature {
+    background-image: linear-gradient(to right, #5B8C5A, #A3BE9F); /* Gradiente verde-terra */
+  }
+  
+  .section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+  
+  .container-custom {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+    /* Melhorias na tipografia */
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #4E7D4C, #8AB87A); /* Gradiente verde mais rico */
+  }
+  
+  .text-gradient-warm {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #B67A63, #D6A490); /* Gradiente terracota para variação */
+  }
   .card {
     background-color: white;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 10px -2px rgba(88, 59, 31, 0.08), 0 2px 4px -1px rgba(88, 59, 31, 0.04);
     overflow: hidden;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(244, 238, 217, 0.5); /* Borda sutil */
   }
 
   .card:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 20px -4px rgba(88, 59, 31, 0.12), 0 4px 8px -2px rgba(88, 59, 31, 0.08);
     transform: translateY(-0.25rem);
+    border-color: rgba(244, 238, 217, 0.8); /* Borda mais visível no hover */
   }
 
   .container-custom {
@@ -128,4 +197,43 @@
 
 .hero-overlay {
   background: linear-gradient(rgba(88, 59, 31, 0.4), rgba(88, 59, 31, 0.4));
+}
+
+/* Efeitos sutis para imagens */
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Efeitos para textos e títulos */
+.title-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.title-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 2rem;
+  height: 2px;
+  background-color: hsl(var(--primary));
+}
+
+/* Variação terracota para underline */
+.title-underline-accent::after {
+  background-color: hsl(var(--accent));
+}
+
+/* Sombras de texto para destaque */
+.text-shadow-sm {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }

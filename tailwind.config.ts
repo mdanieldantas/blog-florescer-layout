@@ -44,15 +44,23 @@ const config: Config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
+        },        /* Cores primárias - Verde e Terra */
         "verde-terra": "#5B8C5A",
-        "verde-claro": "#8AB87A",
+        "verde-claro": "#8AB87A", 
         "verde-escuro": "#3A5A38",
-        terracota: "#B67A63",
-        "coral-claro": "#FFB299",
-        areia: "#F4EED9",
-        bege: "#F3F1F5",
         marrom: "#583B1F",
+        
+        /* Cores acentuadas para elementos de destaque */
+        terracota: "#B67A63",
+        "coral-claro": "#F8D0C3",
+        
+        /* Cores de fundo neutras e harmônicas */
+        areia: "#F4EED9",
+        "areia-clara": "#F9F7E8",
+        
+        /* Tom lavanda substituído por um tom de rosa suave */
+        bege: "#FCF0E6",
+        "bege-claro": "#FDF6F0",
       },
       borderRadius: {
         lg: "var(--radius)",
