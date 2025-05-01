@@ -295,9 +295,112 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       Nome
                     </label>
                     <input
-                
-
-
-Vamos criar a página sobre:
-
-\
+                      type="text"
+                      id="name"
+                      className="w-full px-4 py-2 rounded border border-marrom/20 focus:outline-none focus:ring-1 focus:ring-verde-terra"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm mb-1">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-4 py-2 rounded border border-marrom/20 focus:outline-none focus:ring-1 focus:ring-verde-terra"
+                    />
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="comment" className="block text-sm mb-1">
+                    Comentário
+                  </label>
+                  <textarea
+                    id="comment"
+                    rows={4}
+                    className="w-full px-4 py-2 rounded border border-marrom/20 focus:outline-none focus:ring-1 focus:ring-verde-terra"
+                  ></textarea>
+                </div>
+                <button type="submit" className="btn-primary">
+                  Enviar Comentário
+                </button>
+              </form>
+            </div>
+            
+            {/* Existing Comments */}
+            <div className="space-y-6">
+              {/* Comment 1 */}
+              <div className="p-6 bg-bege rounded-xl">
+                <div className="flex items-start gap-4">
+                  <div className="relative h-12 w-12 rounded-full overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/placeholder-user.jpg"
+                      alt="Avatar do usuário"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <h5 className="font-medium">João Pereira</h5>
+                      <span className="text-xs text-marrom/70">15 de Março, 2023</span>
+                    </div>
+                    <p className="text-sm">
+                      Excelente artigo! A abordagem centrada na pessoa sempre me fascinou, especialmente sua aplicação em ambientes educacionais. Acho que poderíamos ver muito mais desses princípios nas escolas de hoje.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Comment 2 */}
+              <div className="p-6 bg-bege rounded-xl">
+                <div className="flex items-start gap-4">
+                  <div className="relative h-12 w-12 rounded-full overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/placeholder-user.jpg"
+                      alt="Avatar do usuário"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <h5 className="font-medium">Ana Luiza</h5>
+                      <span className="text-xs text-marrom/70">13 de Março, 2023</span>
+                    </div>
+                    <p className="text-sm">
+                      Como psicóloga em formação, tenho estudado bastante a ACP e suas aplicações. Concordo com os desafios mencionados, especialmente em ambientes muito hierárquicos. Alguém aqui tem experiência em aplicar esses princípios em ambientes corporativos tradicionais?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Comment 3 */}
+              <div className="p-6 bg-bege rounded-xl">
+                <div className="flex items-start gap-4">
+                  <div className="relative h-12 w-12 rounded-full overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/placeholder-user.jpg"
+                      alt="Avatar do usuário"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <h5 className="font-medium">Carlos Mendes</h5>
+                      <span className="text-xs text-marrom/70">12 de Março, 2023</span>
+                    </div>
+                    <p className="text-sm">
+                      Gostaria de saber se a autora recomenda algum livro específico para quem quer se aprofundar na abordagem de Rogers. Já li "Tornar-se Pessoa", mas busco algo mais recente que aborde aplicações contemporâneas como mencionado no artigo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

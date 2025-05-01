@@ -42,7 +42,7 @@ export default function Header() {
             <Link href="/categorias" className="text-marrom hover:text-verde-terra transition-colors">
               Categorias
             </Link>
-            <Link href="/artigos" className="text-marrom hover:text-verde-terra transition-colors">
+            <Link href="/blog" className="text-marrom hover:text-verde-terra transition-colors">
               Artigos
             </Link>
             <Link href="/sobre" className="text-marrom hover:text-verde-terra transition-colors">
@@ -65,7 +65,7 @@ export default function Header() {
               <Search className="h-5 w-5" />
             </button>
             <Link href="/materiais/gratuitos" className="hidden md:block btn-primary">
-              Materiais Gratuitos
+              Site Psi Daniel Dantas
             </Link>
             <button
               className="md:hidden p-2 text-marrom hover:text-verde-terra transition-colors"
@@ -90,7 +90,7 @@ export default function Header() {
               Categorias
             </Link>
             <Link
-              href="/artigos"
+              href="/blog"
               className="text-marrom hover:text-verde-terra transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >

@@ -5,22 +5,21 @@ import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react"
 export default function Footer() {
   return (
     <footer className="flex flex-col bg-[#583B1F] text-[#F8F5F0] py-12 border-t border-[#735B43]">
-      {/* Main Footer */}
-      <div className="container mx-auto px-4 max-w-7xl">
+      {/* Main Footer */}      <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center">
             <Link href="/" className="inline-block">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-florescer-humano-X1mHzslfZa3Xj9VQzCwfixQwrCzvHs.png"
+                src="/logos/Logo-Florescer-humano-branca-vertical.png"
                 alt="Florescer Humano"
-                width={150}
-                height={150}
-                className="h-16 w-auto"
+                width={120}
+                height={120}
+                className="h-auto w-auto max-w-[120px]"
               />
             </Link>
-            <p className="text-[#F8F5F0]/80 text-sm">
-              Explorando o potencial humano através da psicologia humanista, arte, educação e filosofia.
+            <p className="text-[#F8F5F0]/80 text-sm text-center">
+              Explorando o potencial humano através da psicologia humanista.
             </p>
           </div>
 
@@ -48,9 +47,15 @@ export default function Footer() {
                   Materiais
                 </Link>
               </li>
+                           
               <li>
                 <Link href="/contato" className="text-[#F8F5F0]/80 hover:text-[#F8F5F0] transition-colors">
                   Contato
+                </Link>
+              </li>
+               <li>
+                <Link href="/contato" className="text-[#F8F5F0]/80 hover:text-[#F8F5F0] transition-colors">
+                  Politicas de privacidade
                 </Link>
               </li>
             </ul>
@@ -62,7 +67,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="text-[#F8F5F0]/80">
                 <a href="mailto:contato@florescerhumano.com.br" className="hover:text-[#F8F5F0] transition-colors">
-                  contato@florescerhumano.com.br
+                  xxxxxxxxxxx@xxxxxx
                 </a>
               </li>
               <li className="text-[#F8F5F0]/80">
@@ -70,7 +75,7 @@ export default function Footer() {
                   (11) 99999-9999
                 </a>
               </li>
-              <li className="text-[#F8F5F0]/80">São Paulo, SP</li>
+              <li className="text-[#F8F5F0]/80">Fortaleza, CE</li>
               <li className="text-[#F8F5F0]/80">Brasil</li>
             </ul>
           </div>

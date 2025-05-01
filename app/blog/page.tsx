@@ -142,7 +142,7 @@ export default function BlogPage() {
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-serif text-verde-terra mb-4">Assine Nossa Newsletter</h2>
             <p className="max-w-2xl mx-auto">
-              Receba novos artigos, recursos gratuitos e informações sobre eventos diretamente em seu e-mail.
+              Receba novos artigos, recursos e atualizações diretamente em seu e-mail.
             </p>
           </div>
 

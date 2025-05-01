@@ -23,7 +23,7 @@ export default function Home() {
         <div className="container-custom relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">Florescer Humano</h1>
           <p className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
-            Explorando o potencial humano através da psicologia humanista, arte, educação e filosofia.
+            Explorando o potencial humano através da psicologia humanista.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/blog" className="btn-primary">
@@ -90,17 +90,37 @@ export default function Home() {
                 <ArrowRight className="h-4 w-4 text-[#583B1F]/60" />
               </button>
             </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <CategoryCard title="Teoria em Prática" icon="Book" slug="/categorias/teoria-pratica" />
-            <CategoryCard title="Psicologia Humanista" icon="Heart" slug="/categorias/psicologia-humanista" />
-            <CategoryCard title="Humanismo na Educação" icon="GraduationCap" slug="/categorias/humanismo-educacao" />
-            <CategoryCard title="Arte & Expressão" icon="Palette" slug="/categorias/arte-expressao" />
-            <CategoryCard title="Humanismo Clínico" icon="Stethoscope" slug="/categorias/humanismo-clinico" />
-            <CategoryCard title="Humanismo Cotidiano" icon="CalendarDays" slug="/categorias/humanismo-cotidiano" />
-            <CategoryCard title="Humanismo e Filosofia" icon="BookMarked" slug="/categorias/humanismo-filosofia" />
-            <CategoryCard title="Todas as Categorias" icon="Grid" slug="/categorias" />
+          </div>          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <CategoryCard 
+              title="Autoconhecimento e Desenvolvimento Pessoal" 
+              icon="User" 
+              slug="/categorias/autoconhecimento" 
+              description="Explore ferramentas e reflexões para sua jornada de crescimento interior." 
+            />
+            <CategoryCard 
+              title="Bem-Estar Emocional e Saúde Mental" 
+              icon="HeartPulse" 
+              slug="/categorias/bem-estar" 
+              description="Conteúdos sobre como lidar com emoções, estresse, ansiedade e cultivar a saúde mental." 
+            />
+            <CategoryCard 
+              title="Florescer na Vida" 
+              icon="Flower2" 
+              slug="/categorias/florescer" 
+              description="Espaço para inspiração, histórias, poemas e reflexões sobre a busca por sentido e autenticidade." 
+            />
+            <CategoryCard 
+              title="Psicologia Humanista e Abordagens Relacionadas" 
+              icon="BookHeart" 
+              slug="/categorias/psicologia-humanista" 
+              description="Aprofunde-se nos conceitos e práticas da Psicologia Humanista, ACP, Focalização e Mindfulness." 
+            />
+            <CategoryCard 
+              title="Relacionamentos e Conexões Humanas" 
+              icon="Users" 
+              slug="/categorias/relacionamentos" 
+              description="Reflexões sobre a importância e a dinâmica das relações interpessoais." 
+            />
           </div>
         </div>
       </section>
