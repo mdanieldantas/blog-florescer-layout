@@ -72,11 +72,8 @@ export default function Home() {
               slug="/blog/cinema-humanismo-sociedade-poetas-mortos"
             />
           </div>
-        </div>
-      </section>
-
-      {/* Explore por Categoria */}
-      <section className="section-padding">
+        </div>      </section>      {/* Explore por Categoria */}
+      <section className="section-padding bg-[#FCF1EC]">
         <div className="container-custom">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl md:text-3xl font-serif text-[#5B8C5A]">Explore por Categoria</h2>
