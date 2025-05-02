@@ -37,12 +37,14 @@ export default function CategoryCard({ title, icon, slug, description }: Categor
     }
   }
     return (
-    <Link href={slug} className="block">
-      <div className="card h-full p-6 flex flex-col items-center text-center hover:border-[#5B8C5A] hover:border">
-        <div className="bg-[#5B8C5A]/10 p-4 rounded-full mb-4">{getIcon()}</div>
-        <h3 className="font-serif text-lg mb-2">{title}</h3>
-        <p className="text-sm text-marrom/70">{description}</p>
+    <Link href={slug} className="block group">
+      <div className="card h-full p-6 flex flex-col items-center text-center border border-transparent hover:border-primary/30 transition-all duration-300">
+        <div className="bg-primary/10 p-4 rounded-full mb-5 transform transition-transform group-hover:scale-110 group-hover:bg-primary/15 duration-300 text-primary">
+          {getIcon()}
+        </div>
+        <h3 className="font-serif text-lg mb-3 text-primary group-hover:text-primary/90">{title}</h3>
+        <p className="text-sm text-foreground/75 leading-relaxed">{description}</p>
       </div>
     </Link>
-  )
+  );
 }

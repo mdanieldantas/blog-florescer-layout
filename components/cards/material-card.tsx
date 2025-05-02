@@ -10,17 +10,21 @@ interface MaterialCardProps {
 }
 
 export default function MaterialCard({ image, type, title, downloadUrl }: MaterialCardProps) {
-  return (
-    <div className="card h-full flex flex-col">
-      <div className="relative h-48 w-full">
-        <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover" />
-        <div className="absolute top-3 left-3 bg-[#B67A63] text-white text-xs px-2 py-1 rounded">{type}</div>
+  return (    <div className="card h-full flex flex-col group">
+      <div className="relative h-48 w-full overflow-hidden">
+        <Image 
+          src={image || "/placeholder.svg"} 
+          alt={title} 
+          fill 
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" 
+        />
+        <div className="absolute top-3 left-3 bg-accent text-accent-foreground text-xs font-medium px-3 py-1.5 rounded-md shadow-sm">{type}</div>
       </div>
-      <div className="p-5 flex-grow flex flex-col">
-        <h3 className="font-serif text-lg text-[#5B8C5A] mb-4">{title}</h3>
+      <div className="p-6 flex-grow flex flex-col">
+        <h3 className="font-serif text-lg font-medium text-primary mb-5 group-hover:text-primary/90 transition-colors">{title}</h3>
         <Link
           href={downloadUrl}
-          className="mt-auto bg-[#5B8C5A] text-white px-4 py-2 rounded-lg flex items-center justify-center hover:bg-[#3A5A38] transition-colors duration-300"
+          className="mt-auto bg-primary text-white px-4 py-3 rounded-lg flex items-center justify-center hover:bg-primary/90 transition-all duration-300 shadow-sm hover:shadow transform hover:-translate-y-0.5"
         >
           <Download className="h-4 w-4 mr-2" />
           Download Gratuito
